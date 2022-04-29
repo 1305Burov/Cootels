@@ -1,0 +1,19 @@
+.advantages {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+        &__text {
+            max-width: 585px;
+        }
+
+        &__img {
+            max-width: 384px;
+            height: auto;
+        }
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+}

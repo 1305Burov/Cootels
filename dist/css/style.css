@@ -214,3 +214,28 @@ select {
 .hotel__button {
   margin-top: 16px;
 }
+
+.hotel__img {
+  max-width: 384px;
+  height: auto;
+}
+
+.advantages__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.advantages__content__text {
+  max-width: 585px;
+}
+
+.advantages__content__img {
+  max-width: 384px;
+  height: auto;
+}
+
+.advantages__content:nth-child(even) {
+  flex-direction: row-reverse;
+}
