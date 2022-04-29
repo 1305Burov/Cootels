@@ -35,7 +35,7 @@
 }
 
 .button:hover {
-  background-color: #202b66;
+  background-color: #253072;
 }
 
 *,
@@ -112,6 +112,17 @@ select {
   margin: 0 auto;
 }
 
+.title {
+  font-family: Montserrat;
+  font-size: 36px;
+  color: #192252;
+  line-height: 150%;
+}
+
+.section {
+  margin: 80px 0px;
+}
+
 .header {
   display: flex;
   min-height: 120px;
@@ -147,4 +158,41 @@ select {
 
 .header__menu .menu__link:hover {
   text-decoration: underline;
+}
+
+.hero__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__content {
+  max-width: 50%;
+  margin-right: 24px;
+}
+
+.hero__title {
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+.hero__text {
+  max-width: 485px;
+  margin-bottom: 32px;
+}
+
+.hero__images {
+  display: flex;
+  gap: 24px;
+}
+
+.hero__images__box {
+  width: 180px;
+  height: 588px;
+  background-color: #eee;
+}
+
+.hero__images__box:nth-child(2) {
+  position: relative;
+  top: 80px;
 }
