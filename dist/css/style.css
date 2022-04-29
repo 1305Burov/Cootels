@@ -1,0 +1,150 @@
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"),url("../fonts/Inter-Medium.woff") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"),url("../fonts/Inter-Regular.woff") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),url("../fonts/Montserrat-SemiBold.woff") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.button {
+  padding: 16px 32px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #192252;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .5s ease;
+}
+
+.button:hover {
+  background-color: #202b66;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article>*+* {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.body {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  color: #848fac;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  min-height: 120px;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-family: Montserrat;
+  font-size: 32px;
+  color: #192252;
+  text-decoration: none;
+}
+
+.header__menu {
+  display: flex;
+}
+
+.header__menu .menu__item:not(:last-child) {
+  margin-right: 32px;
+}
+
+.header__menu .menu__link {
+  font-weight: 500;
+  font-size: 16px;
+  color: #192252;
+  text-decoration: none;
+}
+
+.header__menu .menu__link:hover {
+  text-decoration: underline;
+}

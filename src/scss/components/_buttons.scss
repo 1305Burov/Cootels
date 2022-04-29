@@ -1,0 +1,14 @@
+.button {
+    padding: 16px 32px;
+    border: 0;
+    border-radius: 4px;
+    background-color: $second_color;
+    font-weight: 500;
+    font-size: 16px;
+    color: $light_text;
+    cursor: pointer;
+    transition: background-color .5s ease;
+    &:hover {
+        background-color: $second_color_hover;
+    }
+}
