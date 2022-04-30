@@ -1,0 +1,68 @@
+.rooms {
+    text-align: center;
+    &__content {
+        max-width: 580px;
+        margin: 0 auto;
+        margin-bottom: 80px;
+    }
+    &__text {
+        margin-bottom: 32px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: left;
+        & .card {
+            max-width: 380px;
+            margin-bottom: 40px;
+            &__img {
+                max-width: 380px;
+                height: 480px;
+                border-radius: 4px;
+                object-fit: cover;
+            }
+            &__title {
+                font-family: Montserrat;
+                font-size: 24px;
+                color: $second_color;
+                margin-top: 32px;
+            }
+            &__text {
+                margin-top: 16px;
+            }
+            &__button {
+                position: relative;
+                display: inline-block;
+                margin-top: 32px;
+                padding-right: 32px;
+                font-weight: 400;
+                font-size: 18px;
+                color: $second_color_light;
+                text-decoration: none;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 20px;
+                    height: 20px;
+                    background: url('../img/rooms/arrow.svg') center no-repeat;
+                    transform: translateY(-50%);
+                }
+                &:hover {
+                    &::after {
+                        animation: btnHover .8s ease-in infinite;
+                        animation-direction: alternate;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes btnHover {
+    0% {transform: translate(0px, -50%);}
+    100% { transform: translate(5px, -50%);}
+}

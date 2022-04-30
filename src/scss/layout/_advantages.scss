@@ -11,6 +11,7 @@
         &__img {
             max-width: 384px;
             height: auto;
+            border-radius: 4px;
         }
         &:nth-child(even) {
             flex-direction: row-reverse;

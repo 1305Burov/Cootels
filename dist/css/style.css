@@ -189,6 +189,7 @@ select {
 .hero__images__box {
   width: 180px;
   height: 588px;
+  border-radius: 4px;
   background-color: #eee;
 }
 
@@ -218,6 +219,7 @@ select {
 .hotel__img {
   max-width: 384px;
   height: auto;
+  border-radius: 4px;
 }
 
 .advantages__content {
@@ -234,8 +236,91 @@ select {
 .advantages__content__img {
   max-width: 384px;
   height: auto;
+  border-radius: 4px;
 }
 
 .advantages__content:nth-child(even) {
   flex-direction: row-reverse;
+}
+
+.rooms {
+  text-align: center;
+}
+
+.rooms__content {
+  max-width: 580px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.rooms__text {
+  margin-bottom: 32px;
+}
+
+.rooms__cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.rooms__cards .card {
+  max-width: 380px;
+  margin-bottom: 40px;
+}
+
+.rooms__cards .card__img {
+  max-width: 380px;
+  height: 480px;
+  border-radius: 4px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rooms__cards .card__title {
+  font-family: Montserrat;
+  font-size: 24px;
+  color: #192252;
+  margin-top: 32px;
+}
+
+.rooms__cards .card__text {
+  margin-top: 16px;
+}
+
+.rooms__cards .card__button {
+  position: relative;
+  display: inline-block;
+  margin-top: 32px;
+  padding-right: 32px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #424f7b;
+  text-decoration: none;
+}
+
+.rooms__cards .card__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../img/rooms/arrow.svg") center no-repeat;
+  transform: translateY(-50%);
+}
+
+.rooms__cards .card__button:hover::after {
+  animation: btnHover .8s ease-in infinite;
+  animation-direction: alternate;
+}
+
+@keyframes btnHover {
+  0% {
+    transform: translate(0px, -50%);
+  }
+
+  100% {
+    transform: translate(5px, -50%);
+  }
 }
