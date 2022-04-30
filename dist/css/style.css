@@ -491,3 +491,62 @@ select {
   font-weight: 500;
   color: #192252;
 }
+
+.footer {
+  padding: 120px 0;
+  background-color: #192252;
+  color: #fff;
+}
+
+.footer__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer__media {
+  max-width: 200px;
+}
+
+.footer__media .media__title {
+  font-family: Montserrat;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.footer__media .media__text {
+  line-height: 175%;
+  margin-bottom: 32px;
+}
+
+.footer__media .media__social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer__info {
+  display: flex;
+}
+
+.footer__info .info__list:not(:last-child) {
+  margin-right: 100px;
+}
+
+.footer__info .info__title {
+  font-size: 16px;
+}
+
+.footer__info .info__item {
+  margin-bottom: 24px;
+}
+
+.footer__info .info__link {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__info .info__link:hover {
+  text-decoration: underline;
+}

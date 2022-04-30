@@ -1,0 +1,54 @@
+.footer {
+    padding: 120px 0;
+    background-color: $second_color;
+    color: $light_text;
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__media {
+        max-width: 200px;
+        & .media {
+            &__title {
+                font-family: Montserrat;
+                font-size: 32px;
+                margin-bottom: 12px;
+            }
+            &__text {
+                line-height: 175%;
+                margin-bottom: 32px;
+            }
+            &__social {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        & .info {
+            &__list {
+                &:not(:last-child) {
+                    margin-right: 100px;
+                }
+            }
+            &__title {
+                font-size: 16px;
+            }
+            &__item {
+                margin-bottom: 24px;
+            }
+            &__link {
+                font-size: 16px;
+                color: $light_text;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
