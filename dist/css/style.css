@@ -38,6 +38,76 @@
   background-color: #253072;
 }
 
+#hamburger {
+  display: none;
+}
+
+.header .hamburger-label {
+  position: relative;
+  z-index: 1000;
+  display: none;
+  width: 21px;
+  height: 10px;
+  flex-direction: column;
+  order: 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header .hamburger-label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #192252;
+  transition: all .5s ease;
+}
+
+.header .hamburger-label::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #192252;
+  transition: all .5s ease;
+}
+
+#hamburger:checked~.header__menu {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  z-index: 0;
+  max-height: 150%;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 24px;
+}
+
+#hamburger:checked~.header__menu .nav__item {
+  margin: 0 0 8px 0;
+}
+
+#hamburger:checked~.hamburger-label::after {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: rotate(45deg);
+  transition: all .5s ease;
+}
+
+#hamburger:checked~.hamburger-label::before {
+  content: "";
+  top: 0;
+  right: 0;
+  transform: rotate(-45deg);
+  transition: all .5s ease;
+}
+
 *,
 *::before,
 *::after {
@@ -659,8 +729,43 @@ select {
     padding: 40px 15px;
   }
 
-  .header {
+  .header .hamburger-label {
+    display: flex;
+  }
+
+  .header__button {
     display: none;
+  }
+
+  .header {
+    position: relative;
+    z-index: 1000;
+    background-color: #fff;
+  }
+
+  .header__logo {
+    z-index: 1000;
+  }
+
+  .header .header__menu {
+    position: absolute;
+    top: -200%;
+    right: 0;
+    z-index: 0;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    transition: top .5s ease;
+  }
+
+  .header .header__menu .menu__item {
+    margin: 10px 0;
+  }
+
+  .header .header__menu .menu__item>.menu__link {
+    font-size: 21px;
   }
 
   .rooms__card {

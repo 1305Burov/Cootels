@@ -65,9 +65,44 @@
     .section {
         padding: 40px 15px;
     }
-    .header {
+    
+    .header .hamburger-label {
+        display: flex;
+    }
+
+    .header__button {
         display: none;
     }
+
+    .header {
+        position: relative;
+        z-index: 1000;
+        background-color: #fff;
+        &__logo {
+            z-index: 1000;
+        }
+        .header__menu {
+            position: absolute;
+            top: -200%;
+            right: 0;
+            z-index: 0;
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            transition: top .5s ease;
+            & .menu {
+                &__item {
+                    margin: 10px 0;
+                    & > .menu__link  {
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+    }
+
     .rooms__card {
         padding-right: 0px;
     }
