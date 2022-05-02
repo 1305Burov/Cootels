@@ -1,5 +1,5 @@
 .footer {
-    padding: 120px 0;
+    padding: 120px 15px;
     background-color: $second_color;
     color: $light_text;
     &__wrapper {
@@ -22,7 +22,11 @@
             &__social {
                 display: flex;
                 align-items: center;
-                gap: 24px;
+            }
+            &__link {
+                &:not(:last-child) {
+                    margin-right: 24px;
+                }
             }
         }
     }

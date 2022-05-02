@@ -13,8 +13,14 @@
             height: auto;
             border-radius: 4px;
         }
+        &__text {
+            margin: 0 15px 0 0;
+        }
         &:nth-child(even) {
             flex-direction: row-reverse;
+            & .advantages__content__text {
+               margin: 0 0 0 15px;
+            }
         }
     }
 }

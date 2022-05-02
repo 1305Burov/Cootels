@@ -38,7 +38,7 @@
         & .accordion {
             &__head {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: space-between;
                 margin-bottom: 24px;
             }
@@ -55,7 +55,7 @@
             }
             &__title {
                 position: relative;
-                padding-left: 24px;
+                padding: 0 12px 0 24px;
                 color: $second_color_light;
                 &::before {
                     content: (counter(benefits)'.');

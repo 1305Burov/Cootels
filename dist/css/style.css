@@ -146,6 +146,7 @@ select {
 .header {
   display: flex;
   min-height: 120px;
+  padding: 0 15px;
 }
 
 .header__wrapper {
@@ -202,7 +203,6 @@ select {
 
 .hero__images {
   display: flex;
-  gap: 24px;
 }
 
 .hero__images__box {
@@ -210,6 +210,10 @@ select {
   height: 588px;
   border-radius: 4px;
   background-color: #eee;
+}
+
+.hero__images__box:not(:last-child) {
+  margin-right: 24px;
 }
 
 .hero__images__box:nth-child(2) {
@@ -239,6 +243,7 @@ select {
   max-width: 384px;
   height: auto;
   border-radius: 4px;
+  margin-right: 15px;
 }
 
 .advantages__content {
@@ -258,8 +263,16 @@ select {
   border-radius: 4px;
 }
 
+.advantages__content__text {
+  margin: 0 15px 0 0;
+}
+
 .advantages__content:nth-child(even) {
   flex-direction: row-reverse;
+}
+
+.advantages__content:nth-child(even) .advantages__content__text {
+  margin: 0 0 0 15px;
 }
 
 .rooms {
@@ -297,14 +310,16 @@ select {
 }
 
 .rooms__cards .card__title {
+  margin-top: 32px;
+  padding-right: 15px;
   font-family: Montserrat;
   font-size: 24px;
   color: #192252;
-  margin-top: 32px;
 }
 
 .rooms__cards .card__text {
   margin-top: 16px;
+  padding-right: 15px;
 }
 
 .rooms__cards .card__button {
@@ -391,7 +406,7 @@ select {
 
 .howto__content .accordion__head {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 24px;
 }
@@ -411,7 +426,7 @@ select {
 
 .howto__content .accordion__title {
   position: relative;
-  padding-left: 24px;
+  padding: 0 12px 0 24px;
   color: #424f7b;
 }
 
@@ -512,7 +527,7 @@ select {
 }
 
 .footer {
-  padding: 120px 0;
+  padding: 120px 15px;
   background-color: #192252;
   color: #fff;
 }
@@ -541,7 +556,10 @@ select {
 .footer__media .media__social {
   display: flex;
   align-items: center;
-  gap: 24px;
+}
+
+.footer__media .media__link:not(:last-child) {
+  margin-right: 24px;
 }
 
 .footer__info {
@@ -568,4 +586,178 @@ select {
 
 .footer__info .info__link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: 992px;
+  }
+
+  .section {
+    padding: 80px 15px;
+  }
+
+  .hero__title {
+    font-size: 42px;
+  }
+
+  .howto__content__text {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .hero__images__box {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .rooms__cards {
+    justify-content: center;
+  }
+
+  .rooms__card {
+    padding-right: 15px;
+  }
+
+  .card .card__img {
+    max-width: 100%;
+  }
+
+  .howto__wrapper {
+    flex-direction: column;
+  }
+
+  .howto__content__text {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .howto__buttons {
+    justify-content: center;
+  }
+
+  .comments__text {
+    max-width: 75%;
+  }
+
+  .footer__info .info__list:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 576px;
+  }
+
+  .section {
+    padding: 40px 15px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .rooms__card {
+    padding-right: 0px;
+  }
+
+  .hero__wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    margin: 0 0 48px 0;
+  }
+
+  .hero__images,
+  .hero__images__box {
+    max-width: 100%;
+  }
+
+  .hotel__wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hotel__img {
+    display: none;
+  }
+
+  .advantages__content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .advantages__content:nth-child(even) {
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .advantages__content:nth-child(even) .advantages__content__text {
+    margin: 0 0 24px 0;
+  }
+
+  .advantages__content__text {
+    margin: 0 0 24px 0;
+  }
+
+  .advantages__content__img {
+    max-width: 100%;
+  }
+
+  .footer {
+    padding: 80px 15px;
+  }
+
+  .footer__wrapper,
+  .footer__info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__info .info__list:not(:last-child) {
+    margin-right: 0px;
+  }
+
+  .footer__media .media__social {
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero .hero__title {
+    font-size: 26px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .accordion__title {
+    font-size: 18px;
+  }
+
+  .howto__button {
+    margin: 0 0 32px 0;
+  }
+
+  .howto__buttons {
+    flex-direction: column;
+  }
+
+  .howto__content__text {
+    margin-right: 0px;
+  }
 }
